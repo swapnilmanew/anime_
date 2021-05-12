@@ -2,15 +2,14 @@ import React,{useState, useEffect} from 'react';
 
 const Old = () => {
     const [anime, setAnime] = useState([]);
-    const getAnime = async()=>
+    const getAllAnime = async()=>
     {
         const animeList = await fetch("https://api.jikan.moe/v3/search/anime?q=naruto");
         const animes = await animeList.json();
         setAnime(animes.results);
-        console.log(animes);
     }
     useEffect(() => {
-        getAnime();
+        getAllAnime();
     }, [])
     return (
         <>
@@ -27,10 +26,12 @@ const Old = () => {
                                             <h4>
                                             {item.title}
                                             </h4>
-                                            <div className="d-flex justify-content-around my-3">
+                                            <hr/>
+                                            <div className="d-flex justify-content-around my-2">
                                             <p><b>Episodes : </b>{item.episodes}</p>
                                             <p><b>Score : </b>{item.score}</p>
                                             </div>
+                                            <p className="text-start">{item.synopsis}</p>
                                             <a href={item.url} className="btn">Get More Info</a>
                                         </div>
                                         </div>
