@@ -23,7 +23,7 @@ const Home = () => {
                     <div className="col-12 col-sm-7 col-md-6 m-auto">
                        <div className="d-flex justify-content-between">
                        <input type="text" className="form-control"  onChange={(e)=> setName(e.target.value)} value={name}/>
-                        <button className="btn btn-danger" onClick={getAnime}>Search</button>
+                        <button className="btn" onClick={getAnime}>Search</button>
                        </div>
                     </div>
                 </div>
@@ -48,7 +48,7 @@ const Home = () => {
                                             <p><b>Episodes : </b>{item.episodes}</p>
                                             <p><b>Score : </b>{item.score}</p>
                                             </div>
-                                            <a href={item.url} className="btn btn-danger">Get More Info</a>
+                                            <a href={item.url} className="btn">Get More Info</a>
                                         </div>
                                         </div>
                                     </div>
