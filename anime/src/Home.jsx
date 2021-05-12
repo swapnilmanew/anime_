@@ -5,7 +5,6 @@ const Home = () => {
     const [name, setName] = useState("Naruto");
     const getAnime = async()=>
     {
-        console.log("hello");
         const animeList = await fetch(`https://api.jikan.moe/v3/search/anime?q=${name}`);
         const animes = await animeList.json();
         setAnime(animes.results);
@@ -15,18 +14,23 @@ const Home = () => {
         getAnime();
     }, [])
     return (
-        
+
         <>
-            <div className="container mt-5">
+        <div className="container-fluid bg py-5">
+        <h1 className="text-center display-3 fw-bold text-white">Search Your Fev. Anime</h1>
+                <h2 className="text-center text-white">It's for You - Mahi</h2>
                 <div className="row my-5">
                     <div className="col-12 col-sm-7 col-md-6 m-auto">
-                       <div className="d-flex">
+                       <div className="d-flex justify-content-between">
                        <input type="text" className="form-control"  onChange={(e)=> setName(e.target.value)} value={name}/>
                         <button className="btn btn-danger" onClick={getAnime}>Search</button>
                        </div>
                     </div>
                 </div>
-                <div className="row">
+              
+        </div>
+            <div className="container mt-3">
+                  <div className="row">
                   {
                       anime.map((item)=>
                   {
