@@ -19,7 +19,7 @@ const Home = () => {
         <div className="container-fluid bg py-5">
         <h1 className="text-center display-3 fw-bold text-white pt-5 mt-5">Search Your Fev. Anime</h1>
                 <h2 className="text-center text-white">It's for You - Mahi</h2>
-                <h2 className="text-center text-white">By Swapnil</h2>
+                <h2 className="text-center text-white">- From Swapnil</h2>
                 <div className="row my-5">
                     <div className="col-12 col-sm-7 col-md-6 m-auto">
                        <div className="d-flex justify-content-between">
