@@ -28,8 +28,8 @@ const Old = () => {
                                             </h4>
                                             <hr/>
                                             <div className="d-flex justify-content-around my-2">
-                                            <p><b>Episodes : </b>{item.episodes}</p>
-                                            <p><b>Score : </b>{item.score}</p>
+                                            <p><b><i className="fas fa-film"></i> Episodes : </b>{item.episodes}</p>
+                                           <p><b><i className="fas fa-star-half-alt"></i> Score : </b>{item.score}</p>
                                             </div>
                                             <p className="text-start">{item.synopsis}</p>
                                             <a href={item.url} className="btn">Get More Info</a>

@@ -21,3 +21,11 @@ input,
   background: mediumseagreen !important;
   color: white !important;
 }
+hr {
+  background: mediumseagreen;
+  width: auto;
+  height: 5px;
+}
+.fas {
+  color: mediumseagreen !important;
+}
