@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Home = ({anime}) => {
+const Home = ({data}) => {
     return (
         <>
                   {
-                      anime.map((item)=>
+                      data.map((item)=>
                   {
                       return(
                           <>

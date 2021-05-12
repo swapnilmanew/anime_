@@ -5,7 +5,7 @@ import Fresh from './AllAnimes';
 const Home = () => {
     const [anime, setAnime] = useState([]);
     const [name, setName] = useState("");
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState("");
     const getAnime = async()=>
     {
         setShow(true);
@@ -23,19 +23,19 @@ const Home = () => {
                 <div className="row my-5">
                     <div className="col-12 col-sm-7 col-md-6 m-auto">
                        <div className="d-flex justify-content-between">
-                       <input type="text" className="py-3 form-control"  onChange={(e)=> setName(e.target.value)} value={name}/>
+                       <input type="text" className="py-3 form-control"  onChange={(e)=> setName(e.target.value)} value={name} />
                         <button className="btn px-4" onClick={getAnime}>Search</button>
                        </div>
                     </div>
                 </div>
-              
+                
         </div>
             <div className="container mt-3">
                   <div className="row">
                      {
-                         show === true ?  <Old/> : <Fresh data={anime}/>
+                         show === false ?  <Fresh data={name}/> : <Old/>
                      }
-                 
+             
                 </div>
             </div>
         </>
