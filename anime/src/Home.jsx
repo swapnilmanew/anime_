@@ -1,7 +1,9 @@
 import React,{useState} from 'react'
 import AllAnime from "./AllAnimes";
 
+
 const Home = () => {
+    //
     const [anime, setAnime] = useState([]);
     const [name, setName] = useState("");
     const [show, setShow] = useState("");
